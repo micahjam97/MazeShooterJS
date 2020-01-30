@@ -17,6 +17,8 @@ var camera = new THREE.PerspectiveCamera(VIEWING_ANGLE, ASPECT_RATIO, DRAW_DISTA
 
 // initailize the renderer
 var renderer = new THREE.WebGLRenderer();
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFShadowMap;
 renderer.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 
 DOM_CONTAINER.appendChild(renderer.domElement);
